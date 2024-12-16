@@ -4,3 +4,23 @@ editor: visual
 ---
 
 # Bases de datos {#databases}
+
+### Descarga de bases de datos
+
+Las bases de datos de la encuesta EDUMER (Educación y Meritocracia) están disponibles para el público general y son de acceso gratuito. Estas se encuentran publicadas y archivadas en el repositorio de GitHub de EDUMER, **edumer-data**, en el siguiente link: <https://github.com/educacion-meritocracia/edumer-data.git>. Los formatos disponibles para las bases de datos procesadas incluyen SPSS (.sav), R (.Rdata) y Excel (.dta).
+
+Los cuestionarios se aplicaron a diversos actores del ámbito educativo, seleccionados según los objetivos de la investigación sobre meritocracia, por lo que se incluye información de estudiantes, apoderados y docentes de los cursos encuestados.
+
+La encuesta EDUMER está organizada en dos olas:
+
+-   Primera ola (2023): Incluyó a estudiantes, apoderados y docentes.
+
+-   Segunda ola (2024): Consideró exclusivamente a estudiantes.
+
+El estudio se realizó en nueve colegios distribuidos entre las regiones Metropolitana y de Valparaíso.
+
+### **Protocolo de uso**
+
+Las publicaciones que utilicen las bases de datos EDUMER, en cualquiera de sus versiones, deben citar la fuente de la siguiente manera:
+
+-   EDUMER (2023)
