@@ -475,7 +475,7 @@ db2$p19_o2 <- clean_labels(db2$p19_o2)
 #4. Save and remove ----------------------------------------------------
 
 db_students_w02 <- db2 %>% 
-  select(-c(Duration, fecha, Codigo_aplicacion)) %>% 
+  select(-c(Codigo_aplicacion)) %>% 
   janitor::clean_names() %>% 
   as.data.frame()
 

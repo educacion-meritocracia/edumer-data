@@ -1,10 +1,9 @@
 #*******************************************************************************************************************
 #
 # 0. Identification ---------------------------------------------------
-# Title: Data preparation for EDUMER Panel Survey Studentes
+# Title: Data verification for EDUMER Panel Data
 # Author: Andreas Laffert            
-# Overview: EDUMER Panel Survey Students       
-# Date: 29-10-2024            
+# Date: 10-12-2024            
 #
 #******************************************************************************************************************
 
@@ -16,7 +15,6 @@ pacman::p_load(tidyverse,
                sjmisc, 
                rio,
                here, 
-               panelr,
                glue,
                naniar,
                conflicted)
@@ -29,153 +27,29 @@ rm(list = ls())
 
 # 2. Data --------------------------------------------------------------
 
-load(file = here("output/data/db_proc_students.RData"))
-load(file = here("output/data/db_proc_students_w02.RData"))
+load(file = here("output/data/edumer_students_wide.RData"))
 
-w01 <- db_students
-w02 <- db_students_w02
+glimpse(edumer_students_wide)
 
-rm(db_students, db_students_w02)
-
-# 3. Processing -----------------------------------------------------------
-
-## *****************
-## 3.1 Wide format 
-## *****************
-
-# names and sub fix wave
-
-w01_wide <- w01 %>% 
-  rename_with(.cols = everything(), .fn = ~ paste0(., "_w01")) %>% 
-  as_tibble()
-
-names(w01_wide)
-
-## standardize names wave 2
-
-w02 <- w02 %>%
-  select(-d1_o2) %>% 
-  rename(
-    d3_def_w01_V = d3_def_o1,
-    check_atencion = p10_check_atencion_o2 ,
-    p17_1 = p11_1_o2 ,
-    p17_2 = p11_2_o2,
-    p19 = p12_o2,
-    p20 = p14_o2,
-    p21_mes = p15_mes_o2,
-    p21_ano = p15_ano_o2,
-    p25 = p16_o2,
-    p26 = p17_o2,
-    p27  = p18_o2,
-    p30  = p19_o2,
-    )
-
-
-w02_wide <- w02 %>%
-  rename(id_estudiante_w02 = id_estudiante,
-         sbj_num_w01 = sbj_num_o1) %>%
-  rename_with(~ ifelse(!str_detect(., "_w01$|_w02$|_o1$|_o2$"), paste0(., "_w02"), .), .cols = everything()) %>%
-  rename_with(~ str_replace_all(., c("o2" = "w02", "o1" = "w01")), .cols = everything()) %>%
-  as_tibble()
-
-names(w02_wide)
-
-# id_estudiante
-
-sum(duplicated(w01_wide$id_estudiante_w01))
-
-sum(duplicated(w02_wide$id_estudiante_w02))
-
-sum(duplicated(w02_wide$sbj_num_w01)) 
-
-w02_wide$sbj_num_w01[duplicated(w02_wide$sbj_num_w01)]# only NA
-
-# merge
-key_match <- c("id_estudiante_w01" = "sbj_num_w01")
-
-names(w01_wide)
-names(w02_wide)
-
-edumer_students_wide <- full_join(
-  w01_wide,
-  w02_wide,
-  by = key_match) 
-
-nombres_ordenados <- colnames(edumer_students_wide) %>%
-  str_sort(numeric = TRUE)
-
-edumer_students_wide <- edumer_students_wide %>%
-  select(all_of(nombres_ordenados))
-
-names(edumer_students_wide)
-
-edumer_students_wide <- edumer_students_wide %>% 
-  select(id_estudiante = id_estudiante_w01,
-         starts_with("consentimiento_"),
-         starts_with("fecha_"),
-         starts_with("d2_"),
-         starts_with("d3_"),
-         starts_with("nivel_"),
-         asignacion_w01,
-         tratamiento_w01,
-         control_w01,
-         starts_with("exp"),
-         starts_with("p1_"),
-         starts_with("p2_"),
-         starts_with("p3_"),
-         starts_with("p4_"),
-         starts_with("p5_"),
-         starts_with("p6_"),
-         starts_with("p7_"),
-         starts_with("p8_"),
-         starts_with("p9_"),
-         starts_with("p10_"),
-         starts_with("p11_"),
-         starts_with("p12_"),
-         starts_with("p13_"),
-         starts_with("p14_"),
-         starts_with("p15_"),
-         starts_with("p16_"),
-         s_115_6_w01,
-         starts_with("p17_"),
-         starts_with("p18_"),
-         starts_with("p19_"),
-         starts_with("p20_"),
-         starts_with("p21_"),
-         starts_with("p22_"),
-         starts_with("p23_"),
-         starts_with("p24_"),
-         starts_with("p25_"),
-         starts_with("p26_"),
-         starts_with("p27_"),
-         starts_with("p28_"),
-         starts_with("p29_"),
-         starts_with("p30_"))
-
-# otorgar un id aleatorio a los 35 ids NA
-
-l_id <- max(edumer_students_wide$id_estudiante, na.rm = T)
-m_id <- 999999999
-
-sum(is.na(edumer_students_wide$id_estudiante))
-
-ids_aleatorios <- sample((l_id + 1):m_id, 35)
-
-edumer_students_wide$id_estudiante[is.na(edumer_students_wide$id_estudiante)] <- ids_aleatorios
-
-sum(duplicated(edumer_students_wide$id_estudiante)) # ok
+# 3. Processing  -------------------------------------------------------------
 
 # 3.1 Variables for consistency check: sexo, nivel y edad ----
 
+db <- edumer_students_wide %>%
+  select(id_estudiante, starts_with("fecha"),
+         starts_with(c("d2", "p20", "p21_ano")),
+         d3_def_w01, d3_def_w01_V_w02, nivel_def_w01, 
+         nivel_estudiante_w01, nivel_estudiante_w02)
+
 # Edad
 
-edumer_students_wide$edad_w01 <- (2023 - edumer_students_wide$p21_ano_w01) 
+db$edad_w01 <- (2023 - db$p21_ano_w01) 
 
-edumer_students_wide$edad_w02 <- (2024 - edumer_students_wide$p21_ano_w02)
+db$edad_w02 <- (2024 - db$p21_ano_w02)
 
 # Sexo/genero
 
-edumer_students_wide <- edumer_students_wide %>% 
+db <- db %>% 
   mutate(
     across(
       .cols = starts_with("p20_"),
@@ -196,10 +70,10 @@ edumer_students_wide <- edumer_students_wide %>%
 # estuvieron en 1ero en la Ola 1. estudiantes salen en 7mo y 2do ola 1.
 
 
-frq(edumer_students_wide$nivel_estudiante_w01) # nivel de estidiante en ola 1
-frq(edumer_students_wide$nivel_estudiante_w02) # nivel estudiante ola 2
+frq(db$nivel_estudiante_w01) # nivel de estidiante en ola 1
+frq(db$nivel_estudiante_w02) # nivel estudiante ola 2
 
-edumer_students_wide <- edumer_students_wide %>%  
+db <- db %>%  
   mutate(
     nivel_estudiante_w01 = case_when(nivel_estudiante_w01 == 1 ~ "6to",
                                      nivel_estudiante_w01 == 2 ~ "7mo",
@@ -215,14 +89,14 @@ edumer_students_wide <- edumer_students_wide %>%
     nivel_estudiante_w02 = factor(nivel_estudiante_w02, levels = c("7mo", "2do"))
   )
 
-edumer_students_wide %>% 
+db %>% 
   group_by(nivel_estudiante_w01) %>% 
   count(nivel_estudiante_w02)
 
 # Escuela
 
-frq(edumer_students_wide$d2_w01)
-frq(edumer_students_wide$d2_w02)
+frq(db$d2_w01)
+frq(db$d2_w02)
 
 colegio_map_w02 <- c(
   "1" = "2",   # Nuestra Señora del Carmen de Maipú (w02) corresponde a 2 (Carmen) en w01
@@ -236,24 +110,24 @@ colegio_map_w02 <- c(
   "9" = "12"   # San Alberto Hurtado (w02) -> 12 (San Alberto Hurtado) w01
 )
 
-edumer_students_wide <- edumer_students_wide %>%
+db <- db %>%
   mutate(
     # d2_w01 se mantiene igual,
     # pero d2_w02 se recodifica según el diccionario anterior, convirtiendo a numeric
     d2_w02_homologado = as.numeric(recode(as.character(d2_w02), !!!colegio_map_w02))
   )
 
-frq(edumer_students_wide$d2_w01)
-frq(edumer_students_wide$d2_w02_homologado)
+frq(db$d2_w01)
+frq(db$d2_w02_homologado)
 
-edumer_students_wide <- edumer_students_wide %>% 
+db <- db %>% 
   select(id_estudiante, d2_w01, d2_w02_homologado, everything())
 
 # 3.2 Consistencia ----
 
 # sexo
 
-c_sexo <- edumer_students_wide %>% 
+c_sexo <- db %>% 
   group_by(sexo_w01) %>% 
   count(sexo_w02) %>% 
   mutate(consistencia_sexo = case_when(sexo_w01 == "H" & sexo_w02 == "H" ~ TRUE,
@@ -268,7 +142,7 @@ c_sexo <- edumer_students_wide %>%
                                        TRUE ~ FALSE))
 
 
-edumer_students_wide <- edumer_students_wide %>% 
+db <- db %>% 
   group_by(id_estudiante, d2_w01, d2_w02_homologado) %>% 
   mutate(consistencia_sexo = case_when(
     # Casos donde el sexo coincide entre ambas olas
@@ -285,12 +159,12 @@ edumer_students_wide <- edumer_students_wide %>%
   )) %>% 
   ungroup()
 
-edumer_students_wide %>% 
+db %>% 
   count(consistencia_sexo)# hay 6 casos inconsistentes
 
 # edad
 
-edumer_students_wide <- edumer_students_wide %>% 
+db <- db %>% 
   group_by(id_estudiante, d2_w01, d2_w02_homologado) %>% 
   mutate(consistencia_edad = case_when(
     # Casos donde edad coincide entre ambas olas
@@ -303,12 +177,12 @@ edumer_students_wide <- edumer_students_wide %>%
   )) %>% 
   ungroup() 
 
-edumer_students_wide %>% 
+db %>% 
   count(consistencia_edad) # 10 casos inconsistentes
 
 # nivel
 
-edumer_students_wide <- edumer_students_wide %>% 
+db <- db %>% 
   group_by(id_estudiante, d2_w01, d2_w02_homologado) %>% 
   mutate(consistencia_nivel = case_when(
     nivel_estudiante_w02 == "7mo" & nivel_estudiante_w01 == "6to" ~ TRUE, # 6to -> 7mo
@@ -322,10 +196,10 @@ edumer_students_wide <- edumer_students_wide %>%
   )) %>% 
   ungroup() 
 
-edumer_students_wide %>% 
+db %>% 
   count(consistencia_nivel) # 289 casos inconsistentes
 
-edumer_students_wide <- edumer_students_wide %>%
+db <- db %>%
   group_by(id_estudiante, d2_w01, d2_w02_homologado) %>% 
   mutate(
     # Recodificar consistencia_nivel para casos específicos
@@ -341,26 +215,27 @@ edumer_students_wide <- edumer_students_wide %>%
   ) %>% 
   ungroup() 
 
-edumer_students_wide %>% 
+db %>% 
   count(consistencia_nivel) # ahora solo 1 caso mal digitado
 
 # 3.3 Recodificar -----
 
-frq(edumer_students_wide$sexo_w01)
+frq(db$sexo_w01)
 
-edumer_students_wide <- edumer_students_wide %>%
+db <- db %>%
   mutate(
     sexo_w01 = if_else(consistencia_sexo == FALSE & sexo_w01 != sexo_w02, sexo_w02, sexo_w01)
   )
 
-frq(edumer_students_wide$p21_ano_w01)
+frq(db$p21_ano_w01)
 
-edumer_students_wide <- edumer_students_wide %>%
+db <- db %>%
   mutate(
     p21_ano_w01 = if_else(consistencia_edad == FALSE & p21_ano_w01 != p21_ano_w02, p21_ano_w02, p21_ano_w01)
   )
 
-edumer_students_wide <- edumer_students_wide %>%
+
+db <- db %>%
   mutate(
     nivel_estudiante_w01 = if_else(
       consistencia_nivel == FALSE & as.character(nivel_estudiante_w01) != as.character(nivel_estudiante_w02),
@@ -370,75 +245,32 @@ edumer_students_wide <- edumer_students_wide %>%
     nivel_estudiante_w01 = factor(nivel_estudiante_w01) # Reconversión a factor si es necesario
   )
 
-names(edumer_students_wide)
+names(db)
 
-edumer_students_wide <- edumer_students_wide %>% 
-  select(-c(d2_w02, edad_w01, edad_w02, starts_with("consistencia"))) %>% 
-  rename(d2_homologado_w02 = d2_w02_homologado,
-         p20_w01 = sexo_w01,
-         p20_w02 = sexo_w02)
+db <- db %>% 
+  select(everything(),
+         d2_homologado_w02 = d2_w02_homologado,
+         -c(d2_w02, consistencia_sexo, consistencia_edad, consistencia_nivel))
+
+names(db)
 
 
-## *****************
-## 3.2 Long format 
-## *****************
-
-diccionario_etiquetas <- sapply(edumer_students_wide, attr, "label")
-names(diccionario_etiquetas) <- sub("_w0[1-2]$", "", names(diccionario_etiquetas))
-
-edumer_students_long <- edumer_students_wide %>%
+df <- db %>%
   pivot_longer(
     cols = -id_estudiante,
     names_pattern = "(.*)(_w01|_w02)$",
     names_to = c(".value", "ola"),
     values_drop_na = T
-  )
-
-edumer_students_long <- edumer_students_long %>% 
+  ) %>% 
+  select(1:4) %>% 
   group_by(id_estudiante) %>% 
   mutate(d2_def = if_else(is.na(d2) & !is.na(d2_homologado), d2_homologado, d2)) %>% 
-  ungroup() %>% 
-  select(1:2, d2_def, everything(), -c(d2, d2_homologado))
-
-for (var in names(diccionario_etiquetas)) {
-  if (!is.null(diccionario_etiquetas[[var]]) && var %in% names(edumer_students_long)) {
-    attr(edumer_students_long[[var]], "label") <- diccionario_etiquetas[[var]]
-  }
-}
+  ungroup() 
 
 
-## Etiquetar
+frq(df$d2_def)
 
-labels_or <- sjlabelled::get_labels(edumer_students_wide, values = T, non.labelled = T, drop.na = T)
+frq(df$d2)
+frq(df$d2_homologado)
 
-names(edumer_students_long)
-
-edumer_students_long$ola <- car::recode(edumer_students_long$ola, 
-                                        recodes = c("'_w01' = 1; '_w02' = 2"),
-                                        levels = 1:2,
-                                        as.factor = T)
-
-edumer_students_long$ola <- sjlabelled::set_labels(edumer_students_long$ola,
-                                                   labels = c("Ola 1" = 1, "Ola 2" = 2))
-
-edumer_students_long$consentimiento <- sjlabelled::copy_labels(edumer_students_long$consentimiento, edumer_students_wide$consentimiento_w01)
-
-edumer_students_long$consentimiento <- sjlabelled::copy_labels(edumer_students_long$consentimiento, edumer_students_wide$consentimiento_w01)
-
-edumer_students_long$ola <- sjlabelled::set_label(edumer_students_long$ola, label = "Ola")
-edumer_students_long$d2_def <- sjlabelled::set_label(edumer_students_long$d2_def, label = "Establecimiento eduacional")
-
-edumer_students_wide <- edumer_students_wide %>% 
-  mutate(d2_w01 = as.factor(d2_w01)) 
-
-# 4. Save and export ------------------------------------------------------
-
-base::save(edumer_students_long, file = here("output/data/edumer_students_long.RData"))
-haven::write_dta(edumer_students_long, path = here("output/data/edumer_students_long.dta"))
-haven::write_sav(edumer_students_long, path = here("output/data/edumer_students_long.sav"))
-
-base::save(edumer_students_wide, file = here("output/data/edumer_students_wide.RData"))
-haven::write_dta(edumer_students_wide, path = here("output/data/edumer_students_wide.dta"))
-haven::write_sav(edumer_students_wide, path = here("output/data/edumer_students_wide.sav"))
-
-rm(list = ls(pattern = "^labels[0-9]+$"))
+frq(df$ola)
