@@ -5,6 +5,26 @@ editor: visual
 
 # Diseño del instrumento {#dis-instrument}
 
+El instrumento de recolección de información consiste en un cuestionario estructurado (tipo encuesta) dirigido a los principales actores de las escuelas: docentes, apoderados y estudiantes. 
+
+Este cuestionario fue diseñado para analizar la influencia de aspectos clave del mercado educativo en las percepciones y creencias sobre la meritocracia, así como su impacto en la formación ciudadana dentro de las escuelas, con un enfoque en su evolución a lo largo del tiempo. Los principales temas de interés analítico se organizan en los siguientes módulos:
+
+-   Módulo I: Meritocracia
+
+-   Módulo II: Preferencias y Desigualdad
+
+-   Módulo III: Ciudadanía
+
+-   Módulo IV: Datos Sociodemográficos
+
+El cuestionario aplicado a estudiantes incluye un módulo experimental, en el que se entrega una condición de tratamiento y una condición de control. Al cuestionario aplicado a profesores se le agregan los módulos Estructura de objetivos de rendimiento y dominio y Prácticas pedagógicas.
+
 ## Diseño cuestionarios
 
+Los cuestionarios diseñados fueron programados en un software especializado para la aplicación de encuestas web. Para el trabajo de campo en modalidad CAWI (Computer-Assisted Web Interviewing), se utilizó el software SurveyToGo de Dooblo. Este programa permite programar cuestionarios con diversos tipos de preguntas, incorporar saltos automáticos en preguntas filtro y aplicar controles de consistencia.
+
+El software también permite exportar los datos recopilados a diversos formatos, como Excel, SPSS o ASCII.
+
 ## Lista de variables
+
+Para examinar de manera detallada las diferencias entre los instrumentos aplicados, se sugiere revisar el Listado de Variables y el Libro de Códigos, donde se incluyen todos los ítems medidos en el cuestionario del Estudio Meritocracia en la Escuela.
