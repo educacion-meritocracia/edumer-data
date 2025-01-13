@@ -43,7 +43,7 @@ clean_labels <- function(x) {
 
 # Select ----
 
-db3 <- db[,c(180:246)] %>%  # only parents variables 
+db3 <- db[,c(1,4,180:246)] %>%  # only parents variables 
   select(-starts_with("T")) %>% 
   janitor::clean_names()
 
@@ -53,7 +53,9 @@ names(db3)
 db3 <- db3 %>% 
   rename(id_apoderado = sbj_num_apoderado,
          fecha_apoderado = date_apoderado,
-         consentimiento_apoderado = acepta_apoderado)
+         consentimiento_apoderado = acepta_apoderado,
+         id_estudiante= sbj_num,
+         d2_estudiante = d2)
 
 names(db3)
 glimpse(db3)
@@ -69,6 +71,13 @@ db3 <- db3 %>%
 frq(db3$id)
 get_label(db3$id)
 db3$id <- sjlabelled::set_label(db3$id, label = "Identificador único apoderado")
+
+
+# id_estudiante
+
+sum(duplicated(db3$id_estudiante))
+
+db3$id_estudiante[duplicated(db3$id_estudiante)]# only NA
 
 ## Fecha
 frq(db3$fecha)

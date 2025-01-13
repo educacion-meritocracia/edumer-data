@@ -5,9 +5,11 @@ editor: visual
 
 # Implementación del instrumento {#imp-instrument}
 
-El proceso de implementación del instrumento de recolección de información para el estudio incluye las técnicas y métodos utilizados, el contacto inicial con los establecimientos educativos, el diseño y la aplicación de los cuestionarios y los procedimientos para garantizar la calidad del trabajo de campo.
+El proceso de implementación del instrumento de recolección de información para el estudio incluye el contacto inicial con los establecimientos educativos, el diseño y la aplicación de los cuestionarios y los procedimientos para garantizar la calidad del trabajo de campo.
 
-## Técnica y métodos de recolección de datos
+## Características generales del levantamiento
+
+### Técnica y métodos de recolección de datos
 
 ### Proceso de contacto inicial
 
@@ -15,7 +17,7 @@ Para asegurar la participación de los establecimientos en el estudio, el equipo
 
 Los coordinadores contactaron a los establecimientos seleccionados en función de los siguientes objetivos:
 
-1.  Invitar a los establecimientos a participar en el estudio, presentando la empresa y los objetivos del proyecto. Además, se enviaron cartas personalizadas a cada director como respaldo formal.
+1.  Invitar a los establecimientos a participar en el estudio, presentando la empresa y los objetivos del estudio. Además, se enviaron cartas personalizadas a cada director como respaldo formal.
 
 2.  Solicitar la designación de un colaborador por establecimiento, encargado de gestionar los aspectos operativos de la aplicación del cuestionario.
 
@@ -31,11 +33,11 @@ Si estos métodos no lograban establecer contacto, los coordinadores se dirigía
 
 ### Aplicación de los cuestionarios
 
-Se generaron enlaces específicos para la aplicación de los cuestionarios, compartidos con apoderados y profesores de cada establecimiento. En el caso de los estudiantes, los enlaces se instalaron en los computadores de las salas de computación para facilitar su respuesta.
+Se generaron enlaces específicos para la aplicación de los cuestionarios, compartidos con apoderados y profesores de cada establecimiento. En el caso de los estudiantes, los enlaces se instalaron en los computadores de las salas de computación de cada escuela para la administración de la encuesta.
 
 ## Diseño del instrumento de captura de la información
 
-La encuesta Meritocracia en la escuela se compone de tres cuestionarios estructurados y autoaplicados en formato CAWI a docentes, apoderados y estudiantes.
+La encuesta Meritocracia en la Escuela se compone de tres cuestionarios estructurados y autoaplicados en formato CAWI (Computer-Assisted Web Interviewing) a docentes, apoderados y estudiantes.
 
 Las variables recolectadas abarcan temáticas clave sobre el impacto del mercado educativo en las percepciones de la meritocracia y su influencia en la formación ciudadana en las escuelas. Los módulos temáticos, que incluyen meritocracia, preferencias y desigualdad, ciudadanía y datos sociodemográficos, permiten analizar la relación entre educación y meritocracia, así como su evolución a lo largo del tiempo. Además, se adaptan según el perfil del actor al que se dirige la encuesta.
 
@@ -94,3 +96,7 @@ Durante la supervisión, se consultó a los directores de los establecimientos s
 -   Finalización: Comprobar si el coordinador agradeció la colaboración del establecimiento al término de la aplicación.
 
 Además, se revisó la completitud de las encuestas y la coherencia en los rangos de respuestas para asegurar la calidad de los datos recolectados.
+
+## Incidencias en la aplicación del levantamiento
+
+## Indicadores levantamiento

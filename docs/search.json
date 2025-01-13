@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Manual Metodológico EPJEC",
+    "title": "Manual Metodológico Encuesta EDUMER",
     "section": "",
-    "text": "Presentación\nLa Encuesta Panel Justicia Educacional y Ciudadanía (EPJEC) es un estudio diseñado para analizar la relación entre aspectos morales del mercado educativo y diversas actitudes y comportamientos ligados a la formación ciudadana en estudiantes de ciclo básico y medio en Chile a lo largo del tiempo. Este proyecto examina las percepciones y valores sobre elementos característicos del mercado educativo, como la competencia, la selección y el mérito, para analizar sus implicancias individuales y contextuales en la formación ciudadana durante la etapa escolar. Su objetivo principal es proporcionar datos empíricos para comprender la conformación temprana de creencias sobre la meritocracia en la sociedad y en la escuela, y cómo sus cambios en el tiempo se relacionan con comportamientos y valores políticos y sociales.\nLa encuesta fue diseñada por investigadores del proyecto Educación y Meritocracia (EDUMER), dirigido por Juan Carlos Castillo, profesor asistente del Departamento de Sociología de la Universidad de Chile (FACSO-UCH) e investigador asociado al Centro de Estudios del Conflicto y Cohesión Social (COES). Este proyecto ha sido financiado por la beca Fondecyt No. 1210847 “Meritocracia en la escuela: fundamentos morales del mercado educativo y sus implicancias para la formación ciudadana en Chile” de la Agencia Nacional de Investigación y Desarrollo (ANID), una agencia dependiente del Ministerio de Ciencia, Tecnología, Conocimiento e Innovación de Chile. La recolección de datos de EPJEC ha sido licitada públicamente y adjudicada en todas sus mediciones a la Consultora Datavoz.\nEste manual se estructura en secciones temáticas. La primera sección presenta los antecedentes que motivan el proyecto Educación y Meritocracia. La segunda sección describe el diseño estadístico del estudio, incluyendo el diseño muestral, la estimación de ponderadores y las medidas de precisión. La tercera sección detalla el proceso de diseño del instrumento y el informe técnico del estudio. La cuarta sección resume los principales aspectos del trabajo de campo, destacando las particularidades del proceso de entrevista a los participantes. La quinta sección describe la metodología de procesamiento de datos en sus distintas etapas. La sexta sección detalla el almacenamiento de las versiones de la base de datos y el protocolo para su uso. Luego, se abordan los aspectos éticos y los consentimientos informados de la encuesta. Finalmente, se incluye una sección que contiene el libro de códigos para los tres cuestionarios de la base de datos del estudio.",
+    "text": "Presentación\nLa Encuesta Panel Educación y Meritocracia (EDUMER) es un estudio diseñado para analizar la relación entre aspectos morales del mercado educativo y diversas actitudes y comportamientos ligados a la formación ciudadana en estudiantes de ciclo básico y medio en Chile a lo largo del tiempo. Este proyecto examina las percepciones y valores sobre elementos característicos del mercado educativo, como la competencia, la selección y el mérito, para analizar sus implicancias individuales y contextuales en la formación ciudadana durante la etapa escolar. Su objetivo principal es proporcionar datos empíricos para comprender la conformación temprana de creencias sobre la meritocracia en la sociedad y en la escuela, y cómo sus cambios en el tiempo se relacionan con comportamientos y valores políticos y sociales.\nLa encuesta fue diseñada por investigadores del proyecto Educación y Meritocracia (EDUMER), dirigido por Juan Carlos Castillo, profesor asistente del Departamento de Sociología de la Universidad de Chile (FACSO-UCH) e investigador asociado al Centro de Estudios del Conflicto y Cohesión Social (COES). Este proyecto ha sido financiado por la beca Fondecyt No. 1210847 “Meritocracia en la escuela: fundamentos morales del mercado educativo y sus implicancias para la formación ciudadana en Chile” de la Agencia Nacional de Investigación y Desarrollo (ANID), una agencia dependiente del Ministerio de Ciencia, Tecnología, Conocimiento e Innovación de Chile. La recolección de datos de EDUMER ha sido licitada públicamente y adjudicada en todas sus mediciones a la Consultora Datavoz.\nEste manual se estructura en secciones temáticas. La primera sección presenta los antecedentes que motivan el proyecto Educación y Meritocracia. La segunda sección describe el diseño estadístico del estudio, incluyendo el diseño muestral, la estimación de ponderadores y las medidas de precisión. La tercera sección detalla el proceso de diseño del instrumento y el informe técnico del estudio. La cuarta sección resume los principales aspectos del trabajo de campo, destacando las particularidades del proceso de entrevista a los participantes. La quinta sección describe la metodología de procesamiento de datos en sus distintas etapas. La sexta sección detalla el almacenamiento de las versiones de la base de datos y el protocolo para su uso. Luego, se abordan los aspectos éticos y los consentimientos informados de la encuesta. Finalmente, se incluye una sección que contiene el libro de códigos para los tres cuestionarios de la base de datos del estudio.",
     "crumbs": [
       "Presentación"
     ]
@@ -64,7 +64,7 @@
     "href": "03-instrument-desing.html",
     "title": "3  Diseño del instrumento",
     "section": "",
-    "text": "3.1 Diseño cuestionarios",
+    "text": "3.1 Diseño de cuestionarios\nAquí poner el diseño sustantivo de los cuestionarios; de dónde provienen las preguntas, si se modificaron algunas, se crearon otras nuevas etc.\nLos cuestionarios diseñados fueron programados en un software especializado para la aplicación de encuestas web. Para el trabajo de campo en modalidad CAWI (Computer-Assisted Web Interviewing), se utilizó el software SurveyToGo de Dooblo. Este programa permite programar cuestionarios con diversos tipos de preguntas, incorporar saltos automáticos en preguntas filtro y aplicar controles de consistencia.\nEl software también permite exportar los datos recopilados a diversos formatos, como Excel, SPSS o ASCII.\nNumero de items en Ola 1 y 2 estudiantes y cambios",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño del instrumento</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "03-instrument-desing.html#lista-de-variables",
     "title": "3  Diseño del instrumento",
     "section": "3.2 Lista de variables",
-    "text": "3.2 Lista de variables",
+    "text": "3.2 Lista de variables\nPara examinar de manera detallada las diferencias entre los instrumentos aplicados, se sugiere revisar el Listado de Variables y el Libro de Códigos, donde se incluyen todos los ítems medidos en el cuestionario del Estudio Meritocracia en la Escuela.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Diseño del instrumento</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "04-survey-implementation.html",
     "title": "4  Implementación del instrumento",
     "section": "",
-    "text": "4.1 Técnica y métodos de recolección de datos",
+    "text": "4.1 Características generales del levantamiento",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "04-survey-implementation.html#diseño-del-instrumento-de-captura-de-la-información",
     "title": "4  Implementación del instrumento",
     "section": "4.2 Diseño del instrumento de captura de la información",
-    "text": "4.2 Diseño del instrumento de captura de la información",
+    "text": "4.2 Diseño del instrumento de captura de la información\nLa encuesta Meritocracia en la Escuela se compone de tres cuestionarios estructurados y autoaplicados en formato CAWI (Computer-Assisted Web Interviewing) a docentes, apoderados y estudiantes.\nLas variables recolectadas abarcan temáticas clave sobre el impacto del mercado educativo en las percepciones de la meritocracia y su influencia en la formación ciudadana en las escuelas. Los módulos temáticos, que incluyen meritocracia, preferencias y desigualdad, ciudadanía y datos sociodemográficos, permiten analizar la relación entre educación y meritocracia, así como su evolución a lo largo del tiempo. Además, se adaptan según el perfil del actor al que se dirige la encuesta.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
     ]
@@ -104,7 +104,7 @@
     "href": "04-survey-implementation.html#método-para-la-capacitación-para-la-recolección-de-datos",
     "title": "4  Implementación del instrumento",
     "section": "4.3 Método para la capacitación para la recolección de datos",
-    "text": "4.3 Método para la capacitación para la recolección de datos",
+    "text": "4.3 Método para la capacitación para la recolección de datos\nPara iniciar el trabajo de campo, el equipo de Datavoz consideró la programación de los cuestionarios, la preparación de manuales y protocolos, y la elaboración de un pretest. Una vez finalizada esta etapa, se procedió a la capacitación de los coordinadores de establecimientos.\n\n4.3.1 Pretest\nEl proceso de pretest se desarrolló en dos etapas. Primero, se aplicó el cuestionario a una muestra reducida, y posteriormente se llevó a cabo un grupo focal con los coordinadores de los establecimientos participantes, con el objetivo de evaluar en detalle el desempeño del instrumento.\nLa aplicación inicial tuvo lugar en un curso de un establecimiento de la Región Metropolitana y proporcionó información valiosa sobre diversos aspectos, como el formato de los instrumentos (cuestionarios y protocolos de contacto), el orden de las preguntas, las categorías de respuesta, la duración total del cuestionario y de cada módulo, y las tasas de no respuesta, tanto generales como en preguntas específicas.\nTras esta etapa, se realizó un grupo de discusión con los coordinadores para analizar las dificultades detectadas en las preguntas y la aplicación del instrumento, así como sugerencias para su mejora. Los resultados de ambas instancias permitieron estructurar los cuestionarios y los protocolos de contacto definitivos.\n\n\n4.3.2 Preparación del material para el trabajo de campo\nPara el desarrollo del trabajo de campo y su uso durante las capacitaciones, se elaboró un manual detallado para los coordinadores. Este manual incluye las características del estudio, sus objetivos, los responsables del proyecto y las instrucciones para el funcionamiento de los enlaces a los cuestionarios, entre otros aspectos relevantes.\n\n\n4.3.3 Reclutamiento del personal de campo\nEl reclutamiento de coordinadores fue una etapa crucial para garantizar tasas de respuesta acordes con los requerimientos del estudio. Para el trabajo en establecimientos educacionales, se seleccionaron profesionales de las ciencias sociales con experiencia en educación y/o encuestadores con antecedentes en levantamiento de datos en entornos escolares. Este enfoque asegura un adecuado desarrollo del proceso, desde el contacto inicial hasta el cierre, y favorece la obtención de buenos resultados.\n\n\n4.3.4 Capacitación del equipo de encuestadores\nLos coordinadores de establecimientos fueron capacitados de manera remota a través de Zoom. Durante estas sesiones se enfatizó en las particularidades del estudio. Los ejes principales de la capacitación incluyeron:\n\nExplicación del contenido de los instrumentos y el contexto del estudio.\nTransmisión de los objetivos de la investigación, conceptos clave y consideraciones metodológicas para que los coordinadores trabajen con claridad y confianza.\nIdentificación de posibles dificultades y provisión de herramientas para resolverlas.\nPresentación y entrenamiento en el uso de los protocolos de contacto.\nAseguramiento de una comprensión sólida del cuestionario.\nEnfatizar la neutralidad del equipo en terreno, evitando emitir juicios u opiniones que pudieran influir en las respuestas.\nPromoción de un marco de respeto y cuidado hacia los encuestados, garantizando una experiencia cómoda y positiva.\nFomento de una actitud abierta y receptiva frente a las dudas de los encuestados, aclarando los objetivos de la encuesta y subrayando la confidencialidad de los datos.\n\nEste enfoque integral en la preparación y capacitación busca asegurar un trabajo de campo eficiente, respetuoso y alineado con los objetivos del estudio.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
     ]
@@ -114,7 +114,7 @@
     "href": "04-survey-implementation.html#métodos-de-supervisión",
     "title": "4  Implementación del instrumento",
     "section": "4.4 Métodos de supervisión",
-    "text": "4.4 Métodos de supervisión",
+    "text": "4.4 Métodos de supervisión\nEl proceso de supervisión se llevó a cabo de forma telefónica por un equipo independiente, el cual comenzó a operar una vez iniciado el trabajo en terreno. Este equipo estuvo coordinado de manera permanente por el Encargado de Supervisión y abarcó todos los establecimientos donde fue realizada la aplicación.\nDurante la supervisión, se consultó a los directores de los establecimientos sobre la actuación del coordinador en los siguientes aspectos:\n\nPresentación: Confirmar si el coordinador se identificó adecuadamente y mostró su credencial de Datavoz.\nDesarrollo de la encuesta: Verificar si la aplicación se realizó en el horario previamente agendado.\nFinalización: Comprobar si el coordinador agradeció la colaboración del establecimiento al término de la aplicación.\n\nAdemás, se revisó la completitud de las encuestas y la coherencia en los rangos de respuestas para asegurar la calidad de los datos recolectados.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "07-etichs.html",
     "title": "7  Ética",
     "section": "",
-    "text": "7.1 Aprobación comité ético",
+    "text": "7.1 Aprobación Comité de Ética\nEl estudio “Meritocracia en la escuela: Fundamentos morales del mercado educativo y sus implicancias para la formación ciudadana en Chile”, correspondiente al FONDECYT N° 1210847, cuenta con aprobación ética del Comité de Ética de la Investigación.\nEl proyecto fue revisado en conformidad con las normativas éticas y los lineamientos establecidos para investigaciones que involucran a seres humanos, y se considera que cumple con los principios éticos fundamentales para la protección, respeto y dignidad de los participantes. En este sentido, se ha garantizado que el proyecto cuente con mecanismos adecuados de consentimiento informado y protección de datos.\nEl comité ha aprobado el protocolo con fecha 28 de mayo de 2021 y se autoriza su ejecución conforme a los términos establecidos en el proyecto original.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ética</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "07-etichs.html#consentimientos-informados",
     "title": "7  Ética",
     "section": "7.2 Consentimientos informados",
-    "text": "7.2 Consentimientos informados",
+    "text": "7.2 Consentimientos informados\nLos participantes del proyecto firmaron un Consentimiento Informado por escrito, en el que se detallan los objetivos del estudio, en qué consiste su participación, qué se hará y cómo se resguardará la información y los datos entregados. Dicho Consentimiento Informado fue firmado el 2021.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ética</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "08-codebook.html",
     "title": "8  Libro de códigos",
     "section": "",
-    "text": "8.1 Introducción\nPara el uso adecuado de la base de datos Encuesta Panel Justicia Educacional y Ciudadanía, recomendamos que los investigadores trabajen con el libro de códigos que se presenta a continuación. Esta sección busca facilitar el uso de la base de datos, entregando la información correspondiente a los nombres de las variables, sus etiquetas, así como también las etiquetas de las categorías de respuesta de cada variable. En primer lugar, se detallan las instrucciones de cómo utilizar el libro de códigos interactivo. En segundo lugar, se presenta el libro de códigos propiamente tal para cada cuestionario por separado (estudiantes, docentes y padres y apoderados).",
+    "text": "8.1 Introducción\nPara el uso adecuado de la base de datos Encuesta Panel EDUMER, recomendamos que los investigadores trabajen con el libro de códigos que se presenta a continuación. Esta sección busca facilitar el uso de la base de datos, entregando la información correspondiente a los nombres de las variables, sus etiquetas, así como también las etiquetas de las categorías de respuesta de cada variable. En primer lugar, se detallan las instrucciones de cómo utilizar el libro de códigos interactivo. En segundo lugar, se presenta el libro de códigos propiamente tal para cada cuestionario por separado (estudiantes, docentes y padres y apoderados).",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
     ]
@@ -237,6 +237,46 @@
     "text": "8.5 Padres y apoderados",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "04-survey-implementation.html#características-generales-del-levantamiento",
+    "href": "04-survey-implementation.html#características-generales-del-levantamiento",
+    "title": "4  Implementación del instrumento",
+    "section": "",
+    "text": "4.1.1 Técnica y métodos de recolección de datos\n\n\n4.1.2 Proceso de contacto inicial\nPara asegurar la participación de los establecimientos en el estudio, el equipo Datavoz priorizó minimizar los tiempos de contacto y garantizar la aplicación del cuestionario en los plazos establecidos.\nLos coordinadores contactaron a los establecimientos seleccionados en función de los siguientes objetivos:\n\nInvitar a los establecimientos a participar en el estudio, presentando la empresa y los objetivos del estudio. Además, se enviaron cartas personalizadas a cada director como respaldo formal.\nSolicitar la designación de un colaborador por establecimiento, encargado de gestionar los aspectos operativos de la aplicación del cuestionario.\nEstablecer una fecha para la primera visita, recopilando información sobre disponibilidad y horarios.\n\nPara asegurar un contacto inicial exitoso con los establecimientos, se priorizó contactar directamente al director o directora de cada institución, con el propósito de garantizar una respuesta favorable para su participación en el estudio.\n\n\n4.1.3 Métodos de contacto inicial\nEl contacto se realizó en tres etapas correlativas: a) llamadas telefónicas de los coordinadores a los directores de los establecimientos seleccionados; b) envío de correos electrónicos informativos a los establecimientos educativos; c) envío de cartas formales, detallando el estudio, su importancia y solicitando colaboración.\nSi estos métodos no lograban establecer contacto, los coordinadores se dirigían presencialmente al establecimiento, agendaban la visita y, de ser posible, explicaban en persona los detalles del estudio, acordando la fecha de aplicación.\n\n\n4.1.4 Aplicación de los cuestionarios\nSe generaron enlaces específicos para la aplicación de los cuestionarios, compartidos con apoderados y profesores de cada establecimiento. En el caso de los estudiantes, los enlaces se instalaron en los computadores de las salas de computación de cada escuela para la administración de la encuesta.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
+    ]
+  },
+  {
+    "objectID": "04-survey-implementation.html#incidencias-en-la-aplicación-del-levantamiento",
+    "href": "04-survey-implementation.html#incidencias-en-la-aplicación-del-levantamiento",
+    "title": "4  Implementación del instrumento",
+    "section": "4.5 Incidencias en la aplicación del levantamiento",
+    "text": "4.5 Incidencias en la aplicación del levantamiento",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
+    ]
+  },
+  {
+    "objectID": "04-survey-implementation.html#indicadores-levantamiento",
+    "href": "04-survey-implementation.html#indicadores-levantamiento",
+    "title": "4  Implementación del instrumento",
+    "section": "4.6 Indicadores levantamiento",
+    "text": "4.6 Indicadores levantamiento",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Implementación del instrumento</span>"
+    ]
+  },
+  {
+    "objectID": "06-database.html",
+    "href": "06-database.html",
+    "title": "6  Bases de datos",
+    "section": "",
+    "text": "6.0.1 Descarga de bases de datos\nLas bases de datos de la encuesta EDUMER (Educación y Meritocracia) están disponibles para el público general y son de acceso gratuito. Estas se encuentran publicadas y archivadas en el repositorio de GitHub de EDUMER, edumer-data, en el siguiente link: https://github.com/educacion-meritocracia/edumer-data.git. Los formatos disponibles para las bases de datos procesadas incluyen SPSS (.sav), R (.Rdata) y Excel (.dta).\nLos cuestionarios se aplicaron a diversos actores del ámbito educativo, seleccionados según los objetivos de la investigación sobre meritocracia, por lo que se incluye información de estudiantes, apoderados y docentes de los cursos encuestados.\nLa encuesta EDUMER está organizada en dos olas:\n\nPrimera ola (2023): Incluyó a estudiantes, apoderados y docentes.\nSegunda ola (2024): Consideró exclusivamente a estudiantes.\n\nEl estudio se realizó en nueve colegios distribuidos entre las regiones Metropolitana y de Valparaíso.\n\n\n6.0.2 Protocolo de uso\nLas publicaciones que utilicen las bases de datos EDUMER, en cualquiera de sus versiones, deben citar la fuente de la siguiente manera:\n\nEDUMER (2023)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bases de datos</span>"
     ]
   }
 ]

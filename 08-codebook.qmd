@@ -7,7 +7,7 @@ editor: visual
 
 ## Introducción
 
-Para el uso adecuado de la base de datos Encuesta Panel Justicia Educacional y Ciudadanía, recomendamos que los investigadores trabajen con el libro de códigos que se presenta a continuación. Esta sección busca facilitar el uso de la base de datos, entregando la información correspondiente a los nombres de las variables, sus etiquetas, así como también las etiquetas de las categorías de respuesta de cada variable. En primer lugar, se detallan las instrucciones de cómo utilizar el libro de códigos interactivo. En segundo lugar, se presenta el libro de códigos propiamente tal para cada cuestionario por separado (estudiantes, docentes y padres y apoderados).
+Para el uso adecuado de la base de datos Encuesta Panel EDUMER, recomendamos que los investigadores trabajen con el libro de códigos que se presenta a continuación. Esta sección busca facilitar el uso de la base de datos, entregando la información correspondiente a los nombres de las variables, sus etiquetas, así como también las etiquetas de las categorías de respuesta de cada variable. En primer lugar, se detallan las instrucciones de cómo utilizar el libro de códigos interactivo. En segundo lugar, se presenta el libro de códigos propiamente tal para cada cuestionario por separado (estudiantes, docentes y padres y apoderados).
 
 ## Instrucciones
 
